@@ -1,29 +1,52 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Map.css";
+import { assets } from "../../assets/assets";
 
-const Map = () => {
-  const [region, setRegion] = useState({
-    name: "O'zbekiston xaritasi",
-    phone: "Viloyat ustiga boring",
+const regionLogoPositions = [
+  { id: "Karakalpakstan", x: 188, y: 208, width: 150, height: 70 },
+  { id: "Khorezm", x: 285, y: 295, width: 82, height: 40 },
+  { id: "Navoi", x: 450, y: 305, width: 110, height: 52 },
+  { id: "Bukhara", x: 486, y: 428, width: 88, height: 40 },
+  { id: "Samarkand", x: 595, y: 386, width: 96, height: 42 },
+  { id: "Kashkadarya", x: 618, y: 500, width: 100, height: 44 },
+  { id: "Surkhandarya", x: 742, y: 542, width: 92, height: 42 },
+  { id: "Jizzakh", x: 676, y: 335, width: 82, height: 38 },
+  { id: "Sirdarya", x: 746, y: 310, width: 82, height: 38 },
+  { id: "Tashkent_Region", x: 806, y: 262, width: 92, height: 42 },
+  { id: "Tashkent", x: 860, y: 247, width: 52, height: 28 },
+  { id: "Namangan", x: 882, y: 343, width: 78, height: 36 },
+  { id: "Fergana", x: 836, y: 392, width: 88, height: 40 },
+  { id: "Andijan", x: 924, y: 398, width: 68, height: 32 },
+];
+
+const Map = ({ t }) => {
+  const getDefaultRegion = () => ({
+    name: t.map.defaultRegionName,
+    phone: t.map.defaultRegionPhone,
   });
 
-  // 1. Barcha viloyatlar uchun ma'lumotlar bazasi
+  const [region, setRegion] = useState(getDefaultRegion);
+
   const regionData = {
-    Karakalpakstan: { name: "Qoraqalpog'iston R.", phone: "+998 61 222 11 00" },
-    Khorezm: { name: "Xorazm", phone: "+998 62 444 33 22" },
-    Navoi: { name: "Navoiy", phone: "+998 79 222 11 00" },
-    Bukhara: { name: "Buxoro", phone: "+998 65 333 44 55" },
-    Samarkand: { name: "Samarqand", phone: "+998 66 222 33 44" },
-    Kashkadarya: { name: "Qashqadaryo", phone: "+998 75 999 00 11" },
-    Surkhandarya: { name: "Surxondaryo", phone: "+998 76 888 77 66" },
-    Jizzakh: { name: "Jizzax", phone: "+998 72 666 55 44" },
-    Sirdarya: { name: "Sirdaryo", phone: "+998 67 111 22 33" },
-    Tashkent_Region: { name: "Toshkent viloyati", phone: "+998 90 111 22 33" },
-    Tashkent: { name: "Toshkent shahri", phone: "+998 71 123 45 67" },
-    Namangan: { name: "Namangan", phone: "+998 69 444 55 66" },
-    Fergana: { name: "Farg'ona", phone: "+998 73 555 00 11" },
-    Andijan: { name: "Andijon", phone: "+998 74 777 88 99" },
+    Karakalpakstan: { name: t.map.regions.Karakalpakstan, phone: "+998 61 222 11 00" },
+    Khorezm: { name: t.map.regions.Khorezm, phone: "+998 62 444 33 22" },
+    Navoi: { name: t.map.regions.Navoi, phone: "+998 79 222 11 00" },
+    Bukhara: { name: t.map.regions.Bukhara, phone: "+998 65 333 44 55" },
+    Samarkand: { name: t.map.regions.Samarkand, phone: "+998 66 222 33 44" },
+    Kashkadarya: { name: t.map.regions.Kashkadarya, phone: "+998 75 999 00 11" },
+    Surkhandarya: { name: t.map.regions.Surkhandarya, phone: "+998 76 888 77 66" },
+    Jizzakh: { name: t.map.regions.Jizzakh, phone: "+998 72 666 55 44" },
+    Sirdarya: { name: t.map.regions.Sirdarya, phone: "+998 67 111 22 33" },
+    Tashkent_Region: { name: t.map.regions.Tashkent_Region, phone: "+998 90 111 22 33" },
+    Tashkent: { name: t.map.regions.Tashkent, phone: "+998 71 123 45 67" },
+    Namangan: { name: t.map.regions.Namangan, phone: "+998 69 444 55 66" },
+    Fergana: { name: t.map.regions.Fergana, phone: "+998 73 555 00 11" },
+    Andijan: { name: t.map.regions.Andijan, phone: "+998 74 777 88 99" },
   };
+
+  useEffect(() => {
+    setRegion(getDefaultRegion());
+  }, [t]);
 
   const handleHover = (id) => {
     if (regionData[id]) {
@@ -32,21 +55,23 @@ const Map = () => {
   };
 
   return (
-    <div className="map-section">
+    <div className="map-section" id="distributors">
       <div className="map-info">
-        <h3>{region.name}</h3>
-        <p className="map-phone-display">{region.phone}</p>
+        <h3>{t.map.title}</h3>
+        <p className="map-subtitle">{t.map.subtitle}</p>
+        <div className="map-region-card">
+          <span className="map-region-name">{region.name}</span>
+          <span className="map-phone-display">{region.phone}</span>
+        </div>
       </div>
 
       <div className="map-container">
         <svg
-          viewBox="0 0 1000 650" /* Bu qiymatni SVG faylingizga qarab moslang */
+          viewBox="0 0 1000 650"
           className="uzb-map-svg"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g id="uzb-regions">
-            {/* 2. PATHLARNI SHU YERGA QO'YIB CHIQING */}
-
             <path
               id="Karakalpakstan"
               className="region-path"
@@ -144,6 +169,18 @@ const Map = () => {
               onMouseEnter={() => handleHover("Andijan")}
               d="M905.3 397.9l0-0.2-0.1-0.9 0.1-1.3 0.2-1.3 0-0.8 0-0.4 0-0.4-0.8-0.6-2.7-0.9-0.6 0-0.4-0.3-1.1-1.6-0.7-0.5-0.5 0.5-0.6 0.7-0.9 0.1-3.2-0.7-2.5-0.8-1.5 0.1-1.1 0.2-1.2-0.2-0.5-0.2-0.4-0.2-2.2-3-0.4-0.8-0.5-0.5-0.6-0.3-2.7-1-0.9 0-0.6 0-0.2 0.2-0.6 0-0.7-0.3-1.4-0.7-0.6 0-0.3 0.2-0.1 1.2-0.2-0.1-0.5-0.8-1.2-2.2-1.6-2.4 1.6-1.5-0.9-1.8-0.6-0.8-0.1-0.5 0.3-0.4 1.7-1.6 0.7-0.5 0.6-1 5.5-1.5 1.8 0.9 2.2-1.1 0.6-0.1 1.2 0 1.3 0 1.4-0.1 7 1.7 0.9 0.1 0.9-0.2 3.1-0.1 0.8-0.1 0.4-0.2 0.2-0.1 0.4-0.4 1.3-5.8 0.1-0.6 0.2 0 0.2-0.1 0.2 0 0.3 0 0.2-0.1 0.2 0 0.2-0.1 0.3-0.1 0.2-0.1 0.2-0.2 0.2 0 0.2 0 0.2 0.1 0.2 0 0.2-0.1 0.2-0.1 0.2-0.1 0.4-0.3 0.3-0.4 0.1-0.1 0.2-0.2 0.2-0.2 0.3-0.1 0.2-0.1 0.2 0 0.1 0 0.1 0 0.2 0 0.2-0.1 0.2 0 0.2-0.1 0.1 0 0.2-0.2 0.1-0.2 0.1-0.3 0-0.2 0.3-0.3 0.2-0.2 0.3-0.2 0.3-0.2 0-0.1 0.2 0 0.2 0.1 0.2 0.5 0.2 0.2 0.1 0.1 0.7 1.1 1.1 0.7 1.5 0.5 2.6 0.2 0.1 0 0.1 0.1 0.3 0.1 0.1 0.3 0 0.4-0.1 0.4 0 1.6 1 0.5 1.3 0.1 1 0.4 2.3 3.6 0.2 0.1-0.1 0.2-0.1 0.1-0.1 0.2 0.1 0.2-0.1 0.2-0.2 0.2-0.2 0.2-0.1 0.1-0.1 0.2 0 0.1 0.1 0.2 0.3 0.3 0.2 0.1 0.3 0 0.2 0 0.3 0.2 0.2 0.1 0.1 0.1 0.2 0.1 0.1 0 0.1 0 0.2 0.1 0.3 0.1 0.3 0 0.2 0.1 0.2 0 0.2 0.1 0.2 0.1 0.3 0.1 0.1 0 0.2 0.1 0.2 0 0.3 0.1 0.1 0.1 0.3 0.2 0.3 0.1 0.1 0.1 0.1 0 0.4 0.1 0.2 0 0.1 0.1 0.2 0 0.2 0.1 0.2 0 0.3 0.1 0.2 0.1 0.3 0 0.2 0 0.1 0 0.1-0.1 0.3 0 0.3 0 0.2-0.1 0.2 0 0.2-0.1 0.2 0 0.2-0.1 0.2 0 0.3-0.2 0.3-0.1 0.1 0 0.2-0.1 0.2-0.1 0.2-0.2 0.3 0.1 0.2 0 0.1 0 0.2-0.2 0.2 0 0.2 0 0.1 0 0.2-0.1 0.2 0 0.3-0.1 0.3-0.1 0.2-0.1 0.1-0.1 0.3-0.1 0.2 0 0.2-0.1 0.2 0 0.2 0 0.3 0.1 0.3 0.2 0.2 1.8-0.2 1.2 0.7-0.1 0.8-0.6 0.1 0.2 0.2 0.1 0 0.2 0 0.1-0.2 0.3-0.1 0.2 0.1 0.1 0.1 0 0.3 0.1 0.1 0 0.1 0.1 0.1 0.1 0.2-0.1 0.2 0 0.2 0.1 0.2 0.1 0.3 0.1 0.3-0.1 0.4 0 0.4 0.1 0.2-0.2 0-0.4 0.1-0.4 0.1-0.2 0.2 0 0.1 0 0.3 0.1 0.2-0.3 0.1-0.2 0.1-0.1 0-0.2 0.2-0.1 0.2 0 0.3 0 0.1-0.1 0.1-0.4 0.1-0.2 0.1 0 0.2 0.2 0.1-0.2 0.3-0.2 0.2 0 0.1 0 0.2 0 0.1 0 0.1 0.3 0.1 0.1 0.2 0 0.1-0.2 0.2-0.2 0.9 0.6 3.1-0.2 1.2 0.3 0.4 0.1 0.2 1.1 0 0.1-0.2 0.2-0.2 0.4 0 0.2-1 1.5-0.2 0.1-0.3 0.1-0.3 0.2-0.3 0.2-0.5 0.3-0.1 0-0.3 0.1-0.4 0-0.3 0-0.2 0-0.3-0.1-0.1 0.2-0.1 0.2-0.2 0.1-0.2 0-0.2-0.1-0.2 0-0.2 0-0.3 0-0.4-0.1-0.2 0-0.2 0.1-0.2 0-0.2 0-0.3 0.1-0.2 0.1-0.4-0.1-0.4 0.2-0.5 0.3-0.5 0.3-0.5 0.6-0.4 0.4-0.1 0.3-0.7 0.1-0.5 0.3-0.3 0.2-0.1 0-0.3 0.1-0.3 0-0.3 0.2-0.1 0-0.5 0.2-0.3 0.2-0.4 0.2-0.3 0-0.5-0.1-0.1 0.6 0 0.3 0.3 0-0.2 0.4-0.2 0.4 0 0.1-2 0.5-0.6 0.3-0.2 0-0.1 0-0.1 0.1-0.8 0.4-0.4 0.5 0-0.4 0-0.1 0-0.2-0.1-0.4-0.2 0-0.3 0-0.1 0.1-0.2 0.1-0.1 0.3 0 0.2 0 0.2 0.4 0.4 0.2 0.2 0.4-0.3-0.9 1.4-0.2 1.7-0.2 0.3-0.1 0.3 0 0.1 0 0.1 0 0.1 0 0.3 0 0.3 0 0.2 0 0.1-0.1 1.1-0.1-0.2-0.2-0.3-0.1-0.1-0.2 0.1-0.2-0.1-0.4-0.1-0.2-0.1-0.1 0.1-0.1 0.2-0.2 0.2-0.4 0.2-0.2 0.1-0.1-0.1 0.1-0.3 0-0.3-0.1-0.2-0.2-0.4-0.2-0.2-0.1 0-0.1 0.2-0.1 0-0.2-0.1-0.3 0.2-0.5 0.4-0.3 0.3 0 0.1 0.2 0.1 0.1 0.1-0.3 0-0.4 1.2-0.1 1-0.2 1-0.5 0.9-0.6 0.5-0.3-0.1-0.3-0.1-0.4-0.1-0.1-0.1-0.1-0.1 0-0.1 0-0.2-0.1-0.1-0.2 0-0.1-0.1-0.3-0.1-0.2-0.1-0.1-0.1 0-0.1-0.1-0.1-0.1-0.1-0.1 0-0.1-0.1-0.2-0.2-0.1-0.1-0.1 0-0.2 0.1 0 0.1-0.1 0.1-0.3-0.1-0.3-0.1-0.4-0.1-0.2-0.1-0.3 0.1-0.2-0.1-0.2-0.1-0.2 0-0.1-0.2-0.2 0-0.3 0-0.1-0.1-0.2-0.1 0-0.1 0.1-0.2-0.1-0.1 0-0.2-0.1-0.1-0.1-0.2-0.2-0.3-0.2-0.3-0.1 0-0.1 0-0.1 0-0.1 0.2-0.1 0.2-0.1 0.2-0.1 0.1 0 0.1 0 0.1-0.2 0.2-0.3 0.3-0.2-0.2-0.4-0.4-0.3-0.4-0.3-0.3-0.1-0.2-0.1-0.3-0.1-0.1-0.1-0.2-0.1-0.3-0.2-0.4-0.2-0.4-0.2-0.3-0.3-0.2-0.3-0.2-0.2-0.2-0.1-0.1-0.1-0.2-0.1-0.2-0.1-0.1-0.1 0-0.2 0-0.3 0.1-0.3 0-0.1 0.1-0.2 0.2-0.1 0-0.1 0 0 0.1-0.2-0.1-1.2 0.6-0.1 0-0.2-0.1-0.2 0-0.3 0.1 0.2 0.1 0.2 0.2-0.1 1 1.1 1.9 0 1.3-0.3 1.1 0 0.8 0.4 0.6 2.3 1.7 0.3 0.6 0.3 0.8 0 0.3-0.1 0.1-0.1 0-0.1 0.1-0.1 0.1-0.1 0.3-0.1 0.2-0.1 0.2-0.1 0.1-0.1 0.2-0.2 0.7 0 0.3 0 0.2 0.2 0.4 0.2 0.3-0.6 0.7-0.1 0-0.3 0-0.2 0.1-0.2-0.1-0.2-0.1-0.3 0-0.2-0.1-0.2-0.1-0.2 0-0.1-0.1 0-0.2-0.2-0.3-0.3-0.3-0.4-0.4-0.3-0.4-0.5-0.3-0.4-0.3-0.3-0.3-0.2-0.2-0.1-0.2-0.1 0-0.1 0-0.1 0.2-0.1 0.2-0.1 0.2-0.2 0-0.2-0.1-0.1 0-0.2 0.2-0.2 0-0.2 0-0.2 0-0.1 0.1-0.1-0.2-0.1-0.2-0.1-0.2-0.1-0.3-0.1-0.2-0.2-0.2-0.1 0-0.1-0.1-0.2-0.1-0.2-0.1-0.2-0.1-0.1 0-0.1 0 0-0.2 0-0.1 0.1-0.3 0.1-0.3 0.2-0.4-0.1-0.1-0.1-0.2-0.3 0-0.4-0.1-0.6-0.1-0.3 0z"
             />
+            {regionLogoPositions.map((item) => (
+              <image
+                key={item.id}
+                href={assets.logo}
+                x={item.x - item.width / 2}
+                y={item.y - item.height / 2}
+                width={item.width}
+                height={item.height}
+                className="region-logo-mark"
+                preserveAspectRatio="xMidYMid meet"
+              />
+            ))}
           </g>
         </svg>
       </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({ t }) => {
   const heroRef = useRef(null);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero-section" ref={heroRef}>
+    <section className="hero-section" ref={heroRef} id="main">
       {/* Asosiy fon rasmi */}
       <div className="hero-bg-wrapper">
         <img 
@@ -49,21 +49,14 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-brand">
           <h1 className="hero-title-hero">
-            CITRUS<br />
-            PUNCH
+            ANAR<br />
+            FRESH
           </h1>
         </div>
 
         <div className="hero-right">
           <div className="exclusive-badge">
-            <span className="exclusive-text">EKSKLYUZIVNO<br/>V SAMOKATE</span>
-            <div className="samokat-logo-wrapper">
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Samokat_logo.svg/1200px-Samokat_logo.svg.png" 
-                alt="Samokat Logo" 
-                className="samokat-logo"
-              />
-            </div>
+            <span className="exclusive-text">{t.hero.credit}</span>
           </div>
         </div>
       </div>

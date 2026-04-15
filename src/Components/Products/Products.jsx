@@ -4,16 +4,22 @@ import './Products.css';
 const Products = () => {
   return (
     <section className="products-showcase">
-      {/* Asosiy fon rasmi */}
-      <img 
-        src="https://static.tildacdn.com/tild6265-3961-4234-b335-656639643232/Untitled_Session0322.jpg" 
-        alt="LIT Energy Energy Drinks" 
-        className="products-bg-img" 
-      />
-      
-      {/* Markaziy yozuv */}
-      <div className="products-content">
-        <h2 className="products-mid-text">ENERGY DRINKS</h2>
+      <div className="products-panel">
+        <div className="products-copy products-copy-left">
+          <span className="products-kicker">xurmofresh</span>
+          <h2 className="products-title">Text xurmofresh uchun</h2>
+          <p className="products-text">
+            Тепло, уют, мягкую сладость и чувство спокойного удовольствия.
+          </p>
+        </div>
+
+        <div className="products-copy products-copy-right">
+          <span className="products-kicker">anarfresh</span>
+          <h2 className="products-title">Text anarfresh uchun</h2>
+          <p className="products-text">
+            Яркость, свежесть, энергию и насыщенное фруктовое настроение.
+          </p>
+        </div>
       </div>
     </section>
   );

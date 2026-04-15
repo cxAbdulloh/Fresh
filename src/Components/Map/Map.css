@@ -1,60 +1,87 @@
 .map-section {
-  padding: 60px 20px;
+  padding: 1.4cm 0.5cm 0.9cm;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
+  color: #ffffff;
   background-color: #0a0102;
 }
 
 .map-info {
+  width: 100%;
+  max-width: 1100px;
   text-align: center;
-  margin-bottom: 30px;
-  min-height: 100px;
+  margin-bottom: 0.8cm;
 }
 
 .map-info h3 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #fff;
-  font-family: "Arial Black", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  line-height: 0.85;
-  letter-spacing: -0.05em;
-  margin-bottom: 25px;
-  transform: scaleY(1.15);
-  transform-origin: bottom;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 54px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
-@media (max-width: 568px) {
-  .map-info h3 {
-    font-size: 1.8rem;
-  }
+.map-subtitle {
+  margin-top: 0.2cm;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(16px, 1.7vw, 22px);
+}
+
+.map-region-card {
+  margin: 0.55cm auto 0;
+  width: fit-content;
+  min-width: min(100%, 360px);
+  padding: 0.35cm 0.55cm;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.1cm;
+}
+
+.map-region-name {
+  font-size: clamp(16px, 1.8vw, 24px);
+  font-weight: 700;
+}
+
+.map-phone-display {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 .map-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
-/* XARITA ASOSIY USLUBI */
 .uzb-map-svg {
   width: 100%;
   height: auto;
 }
 
 .region-path {
-  fill: transparent;
-  stroke: rgba(151, 151, 151, 0.527);
+  fill: rgba(255, 255, 255, 0.02);
+  stroke: rgba(255, 255, 255, 0.42);
   stroke-width: 1.5px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-/* KURSOR BORGANDA OQ BO'LISHI */
 .region-path:hover {
-  fill: #fff; /* Viloyat butunlay oq bo'ladi */
-  stroke: #fff;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); /* Oq nur taratadi */
+  fill: rgba(255, 255, 255, 0.14);
+  stroke: #ffffff;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.35));
+}
+
+.region-logo-mark {
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+@media (max-width: 568px) {
+  .map-section {
+    padding-top: 1cm;
+  }
 }

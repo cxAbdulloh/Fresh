@@ -1,0 +1,38 @@
+.partners-section {
+  background: #ffffff;
+  padding: 4cm 0.5cm 1.4cm;
+}
+
+.partners-title {
+  margin: 0 0 1cm;
+  color: #111111;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.partners-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.3cm;
+}
+
+.partner-slot {
+  min-height: 260px;
+  border: 1px dashed rgba(17, 17, 17, 0.22);
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .partners-section {
+    padding-top: 2cm;
+  }
+
+  .partners-slots {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-slot {
+    min-height: 180px;
+  }
+}

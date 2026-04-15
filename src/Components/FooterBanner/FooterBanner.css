@@ -1,0 +1,19 @@
+.footer-banner {
+  width: 100%;
+  background: #0a0102;
+  padding-top: 1.2cm;
+}
+
+.footer-banner-image {
+  display: block;
+  width: 100%;
+  height: min(85vh, 1100px);
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .footer-banner-image {
+    height: 52vh;
+  }
+}
