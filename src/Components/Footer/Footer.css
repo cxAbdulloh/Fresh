@@ -1,0 +1,114 @@
+.lit-footer {
+  background-color: #0a0102;
+  width: 100%;
+  padding: 60px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column; /* Elementlarni ustma-ust joylashtirish uchun */
+}
+
+/* --- KONTAKTLAR QISMI (TEPADA) --- */
+.footer-contacts {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 20px; /* Asosiy yozuv bilan oraliq */
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-label {
+  color: #a1091a; /* Brend qizili */
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.contact-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Arial Black", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  transition: opacity 0.3s;
+}
+
+.contact-link:hover {
+  opacity: 0.7;
+}
+
+/* --- ASOSIY LOGOTIP QISMI --- */
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  color: #fff;
+  font-size: clamp(50px, 14vw, 200px);
+  font-family: "Arial Black", "Impact", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 0.8;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.footer-subtext {
+  color: #fff;
+  font-size: clamp(18px, 3vw, 50px);
+  font-family: "Arial Black", "Impact", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 568px) {
+    .footer-contacts {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 768px) {
+  .footer-contacts {
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-right {
+    align-self: flex-start;
+  }
+
+  .contact-link {
+    font-size: 16px;
+  }
+
+  .footer-logo {
+    font-size: 2.5rem;
+  }
+}

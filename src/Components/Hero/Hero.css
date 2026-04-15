@@ -1,0 +1,129 @@
+:root {
+    --text-white: #ffffff;
+    --sticker-shadow: 
+      -4px -4px 0 #fff,
+       4px -4px 0 #fff,
+      -4px  4px 0 #fff,
+       4px  4px 0 #fff,
+      10px 15px 30px rgba(0,0,0,0.4);
+  }
+  
+  .hero-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Vertikal markazlash */
+  }
+  
+  /* Fon va Overlay */
+  .hero-bg-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  
+  .hero-bg-cans {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%; /* Bankalarni fokusga olish */
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg, 
+      rgba(0,0,0,0.2) 0%, 
+      rgba(0,0,0,0) 50%, 
+      rgba(0,0,0,0.4) 100%
+    );
+  }
+  
+  .hero-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Elementlarni pastki qismga yaqinlashtirish */
+    padding-bottom: 10vh;
+    z-index: 2;
+  }
+  
+  /* Sarlavha dizayni */
+  .hero-title-hero {
+    color: #000;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: clamp(60px, 15vw, 180px);
+    line-height: 0.85;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: -0.04em;
+    text-shadow: var(--sticker-shadow);
+    transform: rotate(-2deg); /* Bir oz agressiv burchak */
+  }
+  
+  /* O'ng tomon dizayni */
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .exclusive-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  
+  .exclusive-text {
+    color: var(--text-white);
+    font-size: 24px;
+    font-weight: 900;
+    text-align: right;
+    line-height: 1.1;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+  }
+  
+  .samokat-logo-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Glassmorphism */
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .samokat-logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Moslashuvchanlik */
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      padding-bottom: 5vh;
+    }
+    
+    .hero-title {
+      font-size: 20vw;
+      text-align: center;
+      transform: rotate(0);
+    }
+    
+    .hero-right, .exclusive-badge {
+      align-items: center;
+    }
+    
+    .exclusive-text {
+      text-align: center;
+      font-size: 18px;
+    }
+  }

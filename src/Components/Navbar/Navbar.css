@@ -1,0 +1,190 @@
+.apple-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: #0a0102;
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  z-index: 9999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+}
+.nav-liquid-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glow-red-top {
+  position: absolute;
+  top: -50px;
+  right: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(161, 9, 26, 0.4) 0%,
+    rgba(10, 1, 2, 0) 70%
+  );
+  filter: blur(40px);
+}
+
+.glow-red-bottom {
+  position: absolute;
+  bottom: -50px;
+  left: -5%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(100, 5, 15, 0.3) 0%,
+    rgba(10, 1, 2, 0) 70%
+  );
+  filter: blur(50px);
+}
+.nav-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.nav-logo {
+  width: auto;
+  display: block;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Arial Black", "Impact", sans-serif;
+  font-style: italic;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .lang-dropdown {
+    margin-right: 5px;
+  }
+}
+
+.apple-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  z-index: 10001;
+}
+
+.apple-burger .line {
+  width: 25px;
+  height: 1.5px;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .apple-burger {
+    display: flex;
+  }
+  .contact-btn {
+    padding: 5px 12px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 900px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #0a0102;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 40px;
+    gap: 20px;
+    z-index: 10000;
+  }
+
+  .apple-nav.active .nav-links {
+    height: 100vh;
+    padding-top: 40px;
+  }
+
+  .nav-links li a {
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+
+  .apple-nav.active .nav-links li a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .apple-burger {
+    display: flex;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .apple-nav.active .line:nth-child(1) {
+    transform: rotate(45deg) translateY(4.5px);
+  }
+
+  .apple-nav.active .line:nth-child(2) {
+    transform: rotate(-45deg) translateY(-4.5px);
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.check {
+  font-size: 12px;
+}
+
+.contact-btn {
+
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* Glassmorphism */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+

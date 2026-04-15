@@ -1,0 +1,120 @@
+:root {
+    --text-white: #ffffff;
+    --text-gray: rgba(255, 255, 255, 0.7);
+    --bg-black: #0a0102;
+  }
+  
+  .dual-hero {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* height: 100vh o'rniga min-height pro darajadagi yechim */
+    overflow: hidden;
+    gap: 10px;
+    padding: 10px 0;
+    background: #0a0102;
+  }
+  
+  .hero-side {
+    flex: 1;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(20px, 5vw, 60px); /* Padding ham responsiv bo'ladi */
+  }
+  
+  .hero-content {
+    width: 100%;
+    color: var(--text-white);
+  }
+  
+  .hero-title-dual {
+    font-size: clamp(32px, 2.5vw, 90px);
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    margin-bottom: 25px;
+    transform: scaleY(1.15);
+    transform-origin: bottom;
+  }
+  
+  /* Statistika qismi */
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap; /* Sig'masa pastga tushadi */
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-num {
+    font-size: clamp(18px, 2.2vw, 40px);
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Arial Black', sans-serif;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-gray);
+    text-transform: uppercase;
+  }
+  
+  .stat-divider {
+    width: 1px;
+    height: 35px;
+    background: rgba(255,255,255,0.2);
+  }
+  
+  /* --- IDEAL RESPONSIVLIK (MOBILE-FIRST) --- */
+  
+  @media (max-width: 1024px) {
+    .dual-hero {
+      flex-direction: column; /* Ustma-ust joylashadi */
+      height: auto;
+    }
+    
+    .hero-side {
+      width: 100%;
+      height: 60vh; /* Har bir rasm uchun ekran balandligining 60% */
+      min-height: 450px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-side {
+      height: 50vh;
+      min-height: 350px;
+    }
+    
+    .hero-title {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+  
+    .stat-divider {
+      display: none; /* Juda kichik ekranlarda chiziqni olib tashlaymiz */
+    }
+  
+    .hero-stats {
+      gap: 15px;
+    }
+  }
