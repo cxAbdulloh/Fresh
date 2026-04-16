@@ -21,12 +21,12 @@ const rightVariant = {
   },
 };
 
-const overlayImages = [
-  { key: "left", src: assets.photo_1, alt: "Xurmofresh photo", label: "xurmo", variants: leftVariant },
-  { key: "right", src: assets.anarfresh_3, alt: "Anarfresh photo", label: "anar", variants: rightVariant },
-];
+const OverlaySection = ({ t }) => {
+  const overlayImages = [
+    { key: "left", src: assets.xurmafresh, alt: "Xurmofresh photo", label: t.overlay.leftLabel, variants: leftVariant },
+    { key: "right", src: assets.anarfresh_3, alt: "Anarfresh photo", label: t.overlay.rightLabel, variants: rightVariant },
+  ];
 
-const OverlaySection = () => {
   return (
     <section className="overlay-hero">
       {overlayImages.map((item) => (

@@ -1,7 +1,9 @@
 .footer-banner {
+  position: relative;
   width: 100%;
   background: #0a0102;
   padding-top: 1.2cm;
+  overflow: hidden;
 }
 
 .footer-banner-image {

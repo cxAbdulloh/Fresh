@@ -35,11 +35,26 @@ const Footer = ({ t }) => {
         </div>
 
         <div className="footer-main">
-          <div className="footer-left">
+          <div className="footer-brand">
             <img src={assets.logo} alt="Anarfresh logo" className="footer-logo-image" />
           </div>
-          <div className="footer-right">
-            <span className="footer-subtext">{t.footer.credit}</span>
+        </div>
+        <div className="footer-credit-row">
+          <span className="footer-subtext">{t.footer.credit}</span>
+        </div>
+        <div className="footer-bottom">
+          <div className="footer-bottom-left">{t.footer.legal}</div>
+          <div className="footer-bottom-right">
+            <span>{t.footer.madeByPrefix} </span>
+            <a
+              href="https://biz-ness.uz"
+              target="_blank"
+              rel="noreferrer"
+              className="footer-bottom-link"
+            >
+              {t.footer.company}
+            </a>
+            {t.footer.madeBySuffix ? <span> {t.footer.madeBySuffix}</span> : null}
           </div>
         </div>
       </div>

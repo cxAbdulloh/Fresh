@@ -20,6 +20,18 @@ const translations = {
     hero: {
       credit: "BY LATIPOV JAHONGIR",
     },
+    overlay: {
+      leftLabel: "ХУРМА",
+      rightLabel: "АНОР",
+    },
+    products: {
+      leftKicker: "xurmofresh",
+      leftTitle: "Какие эмоции дает xurmofresh",
+      leftText: "Тепло, уют, мягкую сладость и чувство спокойного удовольствия.",
+      rightKicker: "anarfresh",
+      rightTitle: "Какие эмоции дает anarfresh",
+      rightText: "Яркость, свежесть, энергию и насыщенное фруктовое настроение.",
+    },
     partners: {
       title: "Партнеры",
       aria: "Место для партнеров",
@@ -39,8 +51,8 @@ const translations = {
         Surkhandarya: "Сурхандарья",
         Jizzakh: "Джизак",
         Sirdarya: "Сырдарья",
-        Tashkent_Region: "Ташкентская область",
-        Tashkent: "Ташкент",
+        Tashkent_Region: "Ташкент",
+        Tashkent: "Ташкентская область",
         Namangan: "Наманган",
         Fergana: "Фергана",
         Andijan: "Андижан",
@@ -51,6 +63,10 @@ const translations = {
       contact: "Телефон",
       email: "Email",
       credit: "BY LATIPOV JAHONGIR",
+      legal: "AnarFresh MCHJ. Все права защищены 2026",
+      madeByPrefix: "Сайт сделан компанией",
+      madeBySuffix: "",
+      company: "LinkSoft",
     },
   },
   uz: {
@@ -62,6 +78,18 @@ const translations = {
     },
     hero: {
       credit: "BY LATIPOV JAHONGIR",
+    },
+    overlay: {
+      leftLabel: "XURMO",
+      rightLabel: "ANOR",
+    },
+    products: {
+      leftKicker: "xurmofresh",
+      leftTitle: "xurmofresh qanday his beradi",
+      leftText: "Iliq kayfiyat, qulaylik, mayin shirinlik va sokin zavq hissini beradi.",
+      rightKicker: "anarfresh",
+      rightTitle: "anarfresh qanday his beradi",
+      rightText: "Yorqinlik, tetiklik, energiya va boy mevali kayfiyatni beradi.",
     },
     partners: {
       title: "Hamkorlar",
@@ -82,8 +110,8 @@ const translations = {
         Surkhandarya: "Surxondaryo",
         Jizzakh: "Jizzax",
         Sirdarya: "Sirdaryo",
-        Tashkent_Region: "Toshkent viloyati",
-        Tashkent: "Toshkent shahri",
+        Tashkent_Region: "Toshkent shahri",
+        Tashkent: "Toshkent viloyati",
         Namangan: "Namangan",
         Fergana: "Farg'ona",
         Andijan: "Andijon",
@@ -94,6 +122,10 @@ const translations = {
       contact: "Telefon",
       email: "Email",
       credit: "BY LATIPOV JAHONGIR",
+      legal: "AnarFresh MCHJ. Barcha huquqlar himoyalangan 2026",
+      madeByPrefix: "Sayt",
+      madeBySuffix: "kompaniyasi tomonidan tayyorlandi",
+      company: "LinkSoft",
     },
   },
   en: {
@@ -105,6 +137,18 @@ const translations = {
     },
     hero: {
       credit: "BY LATIPOV JAHONGIR",
+    },
+    overlay: {
+      leftLabel: "PERSIMMON",
+      rightLabel: "POMEGRANATE",
+    },
+    products: {
+      leftKicker: "xurmofresh",
+      leftTitle: "What emotions does xurmofresh give",
+      leftText: "Warmth, comfort, soft sweetness and a calm feeling of pleasure.",
+      rightKicker: "anarfresh",
+      rightTitle: "What emotions does anarfresh give",
+      rightText: "Brightness, freshness, energy and a rich fruity mood.",
     },
     partners: {
       title: "Partners",
@@ -125,8 +169,8 @@ const translations = {
         Surkhandarya: "Surkhandarya",
         Jizzakh: "Jizzakh",
         Sirdarya: "Sirdarya",
-        Tashkent_Region: "Tashkent Region",
-        Tashkent: "Tashkent City",
+        Tashkent_Region: "Tashkent City",
+        Tashkent: "Tashkent Region",
         Namangan: "Namangan",
         Fergana: "Fergana",
         Andijan: "Andijan",
@@ -137,6 +181,10 @@ const translations = {
       contact: "Phone",
       email: "Email",
       credit: "BY LATIPOV JAHONGIR",
+      legal: "AnarFresh MCHJ. All rights reserved 2026",
+      madeByPrefix: "Website made by",
+      madeBySuffix: "",
+      company: "LinkSoft",
     },
   },
 };
@@ -149,8 +197,8 @@ const App = () => {
     <>
       <Navbar language={language} setLanguage={setLanguage} t={t}/>
       <Hero t={t}/>
-      <OverlaySection/>
-      <Products/>
+      <OverlaySection t={t}/>
+      <Products t={t}/>
       <DualImageSection/>
       <PartnersSection t={t}/>
       <Map t={t}/>
