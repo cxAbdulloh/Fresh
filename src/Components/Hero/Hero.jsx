@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './Hero.css';
+import { assets } from '../../assets/assets';
 
 const Hero = ({ t }) => {
   const heroRef = useRef(null);
@@ -39,8 +40,8 @@ const Hero = ({ t }) => {
       {/* Asosiy fon rasmi */}
       <div className="hero-bg-wrapper">
         <img 
-          src="https://static.tildacdn.com/tild6265-3961-4234-b335-656639643232/Untitled_Session0322.jpg" 
-          alt="LITENERGY Cans" 
+          src={assets.main}
+          alt="Anarfresh main banner" 
           className="hero-bg-cans" 
         />
         <div className="hero-overlay"></div>
