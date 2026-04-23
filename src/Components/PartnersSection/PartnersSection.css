@@ -1,6 +1,6 @@
 .partners-section {
   background: #ffffff;
-  padding: 4cm 0.5cm 1.4cm;
+  padding: 1cm 0.5cm 1.4cm;
 }
 
 .partners-title {
@@ -14,25 +14,62 @@
 .partners-slots {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.3cm;
+  gap: 1rem;
 }
 
-.partner-slot {
-  min-height: 260px;
-  border: 1px dashed rgba(17, 17, 17, 0.22);
-  background: #ffffff;
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.partner-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.partner-name {
+  margin: 0;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.02em;
+}
+
+.partner-description {
+  margin: 0;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: #666666;
+  line-height: 1.4;
+}
+
+.partner-subscribe-btn {
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  font-size: clamp(12px, 0.9vw, 14px);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.partner-subscribe-btn:hover {
+  background: #333333;
 }
 
 @media (max-width: 768px) {
   .partners-section {
-    padding-top: 2cm;
+    padding-top: 1cm;
   }
 
   .partners-slots {
     grid-template-columns: 1fr;
-  }
-
-  .partner-slot {
-    min-height: 180px;
   }
 }

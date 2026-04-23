@@ -28,20 +28,20 @@ const Map = ({ t }) => {
   const [region, setRegion] = useState(getDefaultRegion);
 
   const regionData = {
-    Karakalpakstan: { name: t.map.regions.Karakalpakstan, phone: "+998 61 222 11 00" },
-    Khorezm: { name: t.map.regions.Khorezm, phone: "+998 62 444 33 22" },
-    Navoi: { name: t.map.regions.Navoi, phone: "+998 79 222 11 00" },
-    Bukhara: { name: t.map.regions.Bukhara, phone: "+998 65 333 44 55" },
-    Samarkand: { name: t.map.regions.Samarkand, phone: "+998 66 222 33 44" },
-    Kashkadarya: { name: t.map.regions.Kashkadarya, phone: "+998 75 999 00 11" },
-    Surkhandarya: { name: t.map.regions.Surkhandarya, phone: "+998 76 888 77 66" },
-    Jizzakh: { name: t.map.regions.Jizzakh, phone: "+998 72 666 55 44" },
-    Sirdarya: { name: t.map.regions.Sirdarya, phone: "+998 67 111 22 33" },
-    Tashkent_Region: { name: t.map.regions.Tashkent_Region, phone: "+998 90 111 22 33" },
-    Tashkent: { name: t.map.regions.Tashkent, phone: "+998 71 123 45 67" },
-    Namangan: { name: t.map.regions.Namangan, phone: "+998 69 444 55 66" },
-    Fergana: { name: t.map.regions.Fergana, phone: "+998 73 555 00 11" },
-    Andijan: { name: t.map.regions.Andijan, phone: "+998 74 777 88 99" },
+    Karakalpakstan: { name: t.map.regions.Karakalpakstan, phone: t.map.soon },
+    Khorezm: { name: t.map.regions.Khorezm, phone: t.map.soon },
+    Navoi: { name: t.map.regions.Navoi, phone: t.map.soon },
+    Bukhara: { name: t.map.regions.Bukhara, phone: t.map.soon },
+    Samarkand: { name: t.map.regions.Samarkand, phone: t.map.soon },
+    Kashkadarya: { name: t.map.regions.Kashkadarya, phone: t.map.soon },
+    Surkhandarya: { name: t.map.regions.Surkhandarya, phone: t.map.soon },
+    Jizzakh: { name: t.map.regions.Jizzakh, phone: t.map.soon },
+    Sirdarya: { name: t.map.regions.Sirdarya, phone: t.map.soon },
+    Tashkent_Region: { name: t.map.regions.Tashkent_Region, phone: "+998200171777" },
+    Tashkent: { name: t.map.regions.Tashkent, phone: "+998200171777" },
+    Namangan: { name: t.map.regions.Namangan, phone: t.map.soon },
+    Fergana: { name: t.map.regions.Fergana, phone: t.map.soon },
+    Andijan: { name: t.map.regions.Andijan, phone: t.map.soon },
   };
 
   useEffect(() => {

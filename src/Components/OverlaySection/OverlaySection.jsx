@@ -23,8 +23,8 @@ const rightVariant = {
 
 const OverlaySection = ({ t }) => {
   const overlayImages = [
-    { key: "left", src: assets.xurmafresh, alt: "Xurmofresh photo", label: t.overlay.leftLabel, variants: leftVariant },
-    { key: "right", src: assets.anarfresh_3, alt: "Anarfresh photo", label: t.overlay.rightLabel, variants: rightVariant },
+    { key: "left", src: assets.anarfresh_3, alt: "Anarfresh photo", label: t.overlay.rightLabel, variants: leftVariant },
+    { key: "right", src: assets.xurmafresh, alt: "Xurmofresh photo", label: t.overlay.leftLabel, variants: rightVariant },
   ];
 
   return (

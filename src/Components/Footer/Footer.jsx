@@ -22,14 +22,14 @@ const Footer = ({ t }) => {
           </div>
           <div className="contact-item">
             <span className="contact-label">{t.footer.contact}</span>
-            <a href="tel:+998901234567" className="contact-link">
-              +998 90 123 45 67
+            <a href="tel:+998200171777" className="contact-link">
+              +998 20 017 17 77
             </a>
           </div>
           <div className="contact-item">
             <span className="contact-label">{t.footer.email}</span>
-            <a href="mailto:help@anarfresh.com" className="contact-link">
-              help@anarfresh.com
+            <a href="mailto:anarfresh@gmail.com" className="contact-link">
+              anarfresh@gmail.com
             </a>
           </div>
         </div>

@@ -25,12 +25,12 @@ const translations = {
       rightLabel: "ГРАНАТ",
     },
     products: {
-      leftKicker: "XURMOFRESH",
-      leftTitle: "Мягкая сладость хурмы, которая укутывает теплом и дарит спокойное удовольствие.",
-      leftText: "",
-      rightKicker: "ANARFRESH",
-      rightTitle: "Взрыв сочного граната, который будит чувства и заряжает энергией на максимум.",
-      rightText: "",
+      heading: "Почему именно anarfresh?",
+      features: [
+        "Натуральный гранатовый сок, привезённый из Германии",
+        "Благодаря добавлению гранатовой кожуры настоящий вкус граната. 100% халяль",
+        "Использованы качественные концентраты",
+      ],
     },
     partners: {
       title: "Партнеры",
@@ -41,6 +41,7 @@ const translations = {
       subtitle: "Нажмите на область",
       defaultRegionName: "Выберите регион",
       defaultRegionPhone: "Нажмите на область",
+      soon: "Скоро",
       regions: {
         Karakalpakstan: "Республика Каракалпакстан",
         Khorezm: "Хорезм",
@@ -63,7 +64,7 @@ const translations = {
       contact: "Телефон",
       email: "Email",
       credit: "BY LATIPOV JAHONGIR",
-      legal: "AnarFresh MCHJ. Все права защищены 2026",
+      legal: "© AnarFresh MCHJ. Все права защищены 2026",
       madeByPrefix: "Сайт сделан компанией",
       madeBySuffix: "",
       company: "LinkSoft",
@@ -84,12 +85,12 @@ const translations = {
       rightLabel: "ANOR",
     },
     products: {
-      leftKicker: "XURMOFRESH",
-      leftTitle: "Xurmoning mayin shirinligi iliq kayfiyat bag'ishlab, sokin huzur beradi.",
-      leftText: "",
-      rightKicker: "ANARFRESH",
-      rightTitle: "Shirali anorning portlashi hislarni uyg'otadi va maksimal energiya bilan zaryadlaydi.",
-      rightText: "",
+      heading: "Nega aynan\nanarfresh?",
+      features: [
+        "Germaniyadan olib kelingan tabiiy anor sharbati",
+        "Anor pustlog'i qushilishi orqali haqiqiy anor ta'mi. 100% halol",
+        "Sifatli konsentratlardan foydalanilgan",
+      ],
     },
     partners: {
       title: "Hamkorlar",
@@ -100,6 +101,7 @@ const translations = {
       subtitle: "Viloyat ustiga bosing",
       defaultRegionName: "Viloyatni tanlang",
       defaultRegionPhone: "Viloyat ustiga bosing",
+      soon: "Tez orada",
       regions: {
         Karakalpakstan: "Qoraqalpog'iston R.",
         Khorezm: "Xorazm",
@@ -122,7 +124,7 @@ const translations = {
       contact: "Telefon",
       email: "Email",
       credit: "BY LATIPOV JAHONGIR",
-      legal: "AnarFresh MCHJ. Barcha huquqlar himoyalangan 2026",
+      legal: "© AnarFresh MCHJ. Barcha huquqlar himoyalangan 2026",
       madeByPrefix: "Sayt",
       madeBySuffix: "kompaniyasi tomonidan tayyorlandi",
       company: "LinkSoft",
@@ -143,12 +145,12 @@ const translations = {
       rightLabel: "POMEGRANATE",
     },
     products: {
-      leftKicker: "XURMOFRESH",
-      leftTitle: "The soft sweetness of persimmon wraps you in warmth and gives a calm, pleasant feeling.",
-      leftText: "",
-      rightKicker: "ANARFRESH",
-      rightTitle: "An explosion of juicy pomegranate that awakens the senses and charges you with maximum energy.",
-      rightText: "",
+      heading: "Why exactly anarfresh?",
+      features: [
+        "Natural pomegranate juice imported from Germany",
+        "Real pomegranate taste through added pomegranate peel. 100% halal",
+        "High-quality concentrates are used",
+      ],
     },
     partners: {
       title: "Partners",
@@ -159,6 +161,7 @@ const translations = {
       subtitle: "Click on a region",
       defaultRegionName: "Choose a region",
       defaultRegionPhone: "Click on a region",
+      soon: "Soon",
       regions: {
         Karakalpakstan: "Republic of Karakalpakstan",
         Khorezm: "Khorezm",
@@ -181,7 +184,7 @@ const translations = {
       contact: "Phone",
       email: "Email",
       credit: "BY LATIPOV JAHONGIR",
-      legal: "AnarFresh MCHJ. All rights reserved 2026",
+      legal: "© AnarFresh MCHJ. All rights reserved 2026",
       madeByPrefix: "Website made by",
       madeBySuffix: "",
       company: "LinkSoft",
@@ -190,7 +193,7 @@ const translations = {
 };
 
 const App = () => {
-  const [language, setLanguage] = useState("ru");
+  const [language, setLanguage] = useState("uz");
   const t = translations[language];
 
   return (
