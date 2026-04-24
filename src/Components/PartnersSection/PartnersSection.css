@@ -65,6 +65,7 @@
   border-radius: 4px;
   transition: background 0.3s ease;
   display: inline-block;
+  margin-top: auto;
 }
 
 .partner-subscribe-btn:hover {

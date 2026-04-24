@@ -30,7 +30,7 @@ const PartnersSection = ({ t }) => {
     { id: 10, name: "Bekhzodbeck", title: "Taniqli avtobloger", image: Bekhzodbeck, instagram: "https://instagram.com" },
     { id: 11, name: "Sherzod Jalolov", title: "Choynakning qopqog'i loyihasi asoschisi", image: Choynakningqopqogi, instagram: "https://instagram.com" },
     { id: 12, name: "Davron Vahobov", title: "O'zbekiston Savdo Sanoat Palatasi rahbari", image: DavronVahobov, instagram: "https://instagram.com" },
-    { id: 13, name: "Ibrohim", title: "autotuning_uz loyiha asoschisi", image: Ibrohim, instagram: "https://instagram.com" },
+    { id: 13, name: "Ibrohim va To'ti buvi", title: "autotuning_uz loyiha asoschisi va eng yoshi ulug' 98 yoshli bloger", image: Ibrohim, instagram: "https://instagram.com" },
     { id: 14, name: "Shukhrat Allayarov (Massa)", title: "O'zbekiston mashhur repperi", image: MassaShukhrat, instagram: "https://instagram.com" },
     { id: 15, name: "Usoma Vosiyev", title: "eng.arzoni loyiha asoschisi", image: UsomVosiyev, instagram: "https://instagram.com" }
   ];
