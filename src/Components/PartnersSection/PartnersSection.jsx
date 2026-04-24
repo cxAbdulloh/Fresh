@@ -18,21 +18,21 @@ import UsomVosiyev from "../../assets/Partners/usoma_vosiyev.PNG";
 
 const PartnersSection = ({ t }) => {
   const partners = [
-    { id: 1, name: "Shakhriyor", title: "Shakhriyor", image: Shakhriyor, instagram: "https://instagram.com" },
-    { id: 2, name: "ulugbek_qozogiston", title: "ulugbek_qozogiston", image: UlugbekQozogiston, instagram: "https://instagram.com" },
-    { id: 3, name: "rashid_khalikov", title: "rashid_khalikov", image: RashidKhalikov, instagram: "https://instagram.com" },
-    { id: 4, name: "saadulla_abdullayev_texnoplov", title: "saadulla_abdullayev_texnoplov", image: SaadullaAbdullayev, instagram: "https://instagram.com" },
-    { id: 5, name: "ulugbek", title: "ulugbek", image: Ulugbek, instagram: "https://instagram.com" },
-    { id: 6, name: "bonu_ikromova", title: "bonu_ikromova", image: BonuIkromova, instagram: "https://instagram.com" },
-    { id: 7, name: "abdurahim_grid_aziz_tolaganov", title: "abdurahim_grid_aziz_tolaganov", image: Abdurahim, instagram: "https://instagram.com" },
-    { id: 8, name: "gulom_nasriddinov", title: "gulom_nasriddinov", image: GulomnNasriddinov, instagram: "https://instagram.com" },
-    { id: 9, name: "aleksandr_orlov", title: "aleksandr_orlov", image: Aleksandr, instagram: "https://instagram.com" },
-    { id: 10, name: "bekhzodbeck", title: "bekhzodbeck", image: Bekhzodbeck, instagram: "https://instagram.com" },
-    { id: 11, name: "choynakningqopqogi", title: "choynakningqopqogi", image: Choynakningqopqogi, instagram: "https://instagram.com" },
-    { id: 12, name: "davron_vahobov", title: "davron_vahobov", image: DavronVahobov, instagram: "https://instagram.com" },
-    { id: 13, name: "ibrohim", title: "ibrohim", image: Ibrohim, instagram: "https://instagram.com" },
-    { id: 14, name: "massa_shukhrat_allayarov", title: "massa_shukhrat_allayarov", image: MassaShukhrat, instagram: "https://instagram.com" },
-    { id: 15, name: "usoma_vosiyev", title: "usoma_vosiyev", image: UsomVosiyev, instagram: "https://instagram.com" }
+    { id: 1, name: "Shakhriyor", title: "O'zbekiston mashhur repperi", image: Shakhriyor, instagram: "https://instagram.com" },
+    { id: 2, name: "Ulugbek Sharipov", title: "Qozog'iston biznesmeni", image: UlugbekQozogiston, instagram: "https://instagram.com" },
+    { id: 3, name: "Rashid Khalikov", title: "O'zbekistonda hizmat ko'rsatgan san'atkor", image: RashidKhalikov, instagram: "https://instagram.com" },
+    { id: 4, name: "Saadulla Abdullayev (Texnoplov)", title: "O'zbekistondagi eng taniqli texno blogerlardan biri", image: SaadullaAbdullayev, instagram: "https://instagram.com" },
+    { id: 5, name: "Ulug'bek", title: "Mittivine jamoasi sardori Ulug'bek (Mitti.me)", image: Ulugbek, instagram: "https://instagram.com" },
+    { id: 6, name: "Bonu Ikromova", title: "Mittivine jamoasi a'zosi", image: BonuIkromova, instagram: "https://instagram.com" },
+    { id: 7, name: "Abdurahim Grid va Aziz To'laganov", title: "Mittivine jamoasi a'zolari", image: Abdurahim, instagram: "https://instagram.com" },
+    { id: 8, name: "Gulomn Nasriddinov", title: "Mittivine jamoasi a'zosi", image: GulomnNasriddinov, instagram: "https://instagram.com" },
+    { id: 9, name: "Aleksandr Orlov", title: "Rossiya va MDH miqyosidagi mashhur restoratori", image: Aleksandr, instagram: "https://instagram.com" },
+    { id: 10, name: "Bekhzodbeck", title: "Taniqli avtobloger", image: Bekhzodbeck, instagram: "https://instagram.com" },
+    { id: 11, name: "Sherzod Jalolov", title: "Choynakning qopqog'i loyihasi asoschisi", image: Choynakningqopqogi, instagram: "https://instagram.com" },
+    { id: 12, name: "Davron Vahobov", title: "O'zbekiston Savdo Sanoat Palatasi rahbari", image: DavronVahobov, instagram: "https://instagram.com" },
+    { id: 13, name: "Ibrohim", title: "autotuning_uz loyiha asoschisi", image: Ibrohim, instagram: "https://instagram.com" },
+    { id: 14, name: "Shukhrat Allayarov (Massa)", title: "O'zbekiston mashhur repperi", image: MassaShukhrat, instagram: "https://instagram.com" },
+    { id: 15, name: "Usoma Vosiyev", title: "eng.arzoni loyiha asoschisi", image: UsomVosiyev, instagram: "https://instagram.com" }
   ];
 
   return (
