@@ -25,7 +25,7 @@ const PartnersSection = ({ t }) => {
     { id: 5, name: "Ulug'bek", title: "Mittivine jamoasi sardori Ulug'bek (Mitti.me)", image: Ulugbek, instagram: "https://instagram.com" },
     { id: 6, name: "Bonu Ikromova", title: "Mittivine jamoasi a'zosi", image: BonuIkromova, instagram: "https://instagram.com" },
     { id: 7, name: "Abdurahim Grid va Aziz To'laganov", title: "Mittivine jamoasi a'zolari", image: Abdurahim, instagram: "https://instagram.com" },
-    { id: 8, name: "Gulomn Nasriddinov", title: "Mittivine jamoasi a'zosi", image: GulomnNasriddinov, instagram: "https://instagram.com" },
+    { id: 8, name: "G'ulom Nasriddinov", title: "Mittivine jamoasi a'zosi", image: GulomnNasriddinov, instagram: "https://instagram.com" },
     { id: 9, name: "Aleksandr Orlov", title: "Rossiya va MDH miqyosidagi mashhur restoratori", image: Aleksandr, instagram: "https://instagram.com" },
     { id: 10, name: "Bekhzodbeck", title: "Taniqli avtobloger", image: Bekhzodbeck, instagram: "https://instagram.com" },
     { id: 11, name: "Sherzod Jalolov", title: "Choynakning qopqog'i loyihasi asoschisi", image: Choynakningqopqogi, instagram: "https://instagram.com" },
